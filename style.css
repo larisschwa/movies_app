@@ -18,22 +18,20 @@ body {
   margin: 0;
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap; /* Allow movies to wrap to the next line */
   justify-content: center;
 }
 
 .movie-grid li {
+  flex: 0 0 140px; /* Set a fixed width for each movie */
   padding: 10px 15px;
-  text-align: left;
-}
-
-.movie {
-  width: 140px;
+  text-align: center; /* Center movie text */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .movie-title,
 .movie-year {
   font-size: 0.8em;
-  text-align: center;
 }
 
 .movie-title {
@@ -44,9 +42,9 @@ body {
   color: #999;
 }
 
-
 .movie-poster {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    width: 128px;
-    height: 193px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 128px;
+  height: 193px;
+  margin: 0 auto; /* Center movie poster horizontally */
 }
